@@ -3,11 +3,11 @@
 //login
 //------------------------------------------
 message m__account__login__l2s{
-    required int32 msg_id [default = 10001];
-    required string account_name;
+    required int32 msg_id [default = 10001] = 1;
+    required string account_name = 2;
 }
 
 message m__account__login__s2l{
-    required int32 msg_id [default = 10002];
-    required int32 result;
+    required int32 msg_id [default = 10002] = 1;
+    required int32 result = 2;
 }
