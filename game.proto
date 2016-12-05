@@ -1,0 +1,13 @@
+
+//------------------------------------------
+//login
+//------------------------------------------
+message m__account__login__l2s{
+    required int32 msg_id [default = 10001];
+    required string account_name;
+}
+
+message m__account__login__s2l{
+    required int32 msg_id [default = 10002];
+    required int32 result;
+}
