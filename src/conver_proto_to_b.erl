@@ -14,10 +14,15 @@ start() ->
     halt().
 
 read({ok, Data}, Read, Write) ->
-    [_, Record, _, MsgId | _T] = string:tokens(Data, " (,{="),
-    [_, M, F, _] = re:split(Record, "__", [{return, list}]),
+    try
+        [_, Record, _, MsgId | _T] = string:tokens(Data, " (,{="),
+        [_, M, F, _] = re:split(Record, "__", [{return, list}]),
 
-    io:format(Write, "get(~s) -> {~s, ~s, ~s}; ~n", [MsgId, Record, "mod_" ++ M, F]),
+        io:format(Write, "get(~s) -> {~s, ~s, ~s}; ~n", [MsgId, Record, "mod_" ++ M, F])
+    catch 
+        _:_ ->
+            ignore
+    end,
     read(file:read_line(Read), Read, Write);
 read(eof, _Read, Write) ->
     io:format(Write, "get(_) -> undefined. ~n", []).
