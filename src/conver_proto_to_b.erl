@@ -15,7 +15,7 @@ start() ->
 
 read({ok, Data}, Read, Write) ->
     try
-        [_, Record, _, MsgId | _T] = string:tokens(Data, " (,{="),
+        [_, Record, _, MsgId | _T] = string:tokens(Data, " (,{=}"),
         [_, M, F, _] = re:split(Record, "__", [{return, list}]),
 
         io:format(Write, "get(~s) -> {~s, ~s, ~s}; ~n", [MsgId, Record, "mod_" ++ M, F])
