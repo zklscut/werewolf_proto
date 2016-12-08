@@ -1,6 +1,7 @@
 
-message p_role_show_base {
-    required string role_name = 1;
+message p_player_show_base {
+    required uint32 player_id = 1;
+    required string nick_name = 2;
 }
 
 //------------------------------------------
@@ -31,6 +32,11 @@ message m__player__info__s2l{
 }
 
 
+message m__player__errcode__s2l{
+    required int32 msg_id = 1[default = 12004];   
+    required int32 errcode = 2;
+}
+
 //------------------------------------------
 //room
 //------------------------------------------
@@ -43,7 +49,7 @@ message p_room {
     required int32 room_id = 1;
     required int32 cur_player_num = 2;
     required int32 max_player_num = 3;
-    required p_role_show_base owner = 4;
+    required p_player_show_base owner = 4;
     required string room_name = 5;
     required string room_status = 6;
 }
@@ -61,7 +67,7 @@ message m__room__enter_room__l2s {
 message m__room__enter_room__s2l {
     required int32 msg_id = 1[default = 13004];
     required p_room room_info = 2;
-    repeated p_role_show_base member_list = 3;
+    repeated p_player_show_base member_list = 3;
 }
 
 message m__room__create_room__l2s {
@@ -72,7 +78,7 @@ message m__room__create_room__l2s {
 
 message m__room__create_room__s2l {
     required int32 msg_id = 1[default = 13006];
-    required p_room = 2;
+    required p_room room_info = 2;
 }
 
 message m__room__leave_room__l2s {
