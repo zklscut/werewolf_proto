@@ -1,0 +1,121 @@
+
+message p_player_show_base {
+    required uint32 player_id = 1;
+    required string nick_name = 2;
+}
+
+//------------------------------------------
+//login
+//------------------------------------------
+message m__account__login__l2s{
+    required int32 msg_id = 1[default = 10001];
+    required string account_name = 2;
+}
+
+message m__account__login__s2l{
+    required int32 msg_id = 1[default = 10002];
+    required int32 result = 2;
+}
+
+//------------------------------------------
+//player_info
+//------------------------------------------
+
+message m__player__info__l2s{
+    required int32 msg_id = 1[default = 12001];
+}
+
+message m__player__info__s2l{
+    required int32 msg_id = 1[default = 12002];   
+    required uint32 player_id = 2;
+    // other info to be add
+}
+
+
+message m__player__errcode__s2l{
+    required int32 msg_id = 1[default = 12004];   
+    required int32 errcode = 2;
+}
+
+//------------------------------------------
+//room
+//------------------------------------------
+//
+message m__room__get_list__l2s{
+    required int32 msg_id = 1[default = 13001];
+}
+
+message p_room {
+    required int32 room_id = 1;
+    required int32 cur_player_num = 2;
+    required int32 max_player_num = 3;
+    required p_player_show_base owner = 4;
+    required string room_name = 5;
+    required string room_status = 6;
+}
+
+message m__room__get_list__s2l {
+    required int32 msg_id = 1[default = 13002];
+    repeated p_room room_list = 2;
+}
+
+message m__room__enter_room__l2s {
+    required int32 msg_id = 1[default = 13003];
+    required int32 room_id = 2;
+}
+
+message m__room__enter_room__s2l {
+    required int32 msg_id = 1[default = 13004];
+    required p_room room_info = 2;
+    repeated p_player_show_base member_list = 3;
+}
+
+message m__room__create_room__l2s {
+    required int32 msg_id = 1[default = 13005];
+    required int32 max_player_num = 2;
+    required string room_name = 3;
+}
+
+message m__room__create_room__s2l {
+    required int32 msg_id = 1[default = 13006];
+    required p_room room_info = 2;
+}
+
+message m__room__leave_room__l2s {
+    required int32 msg_id = 1[default = 13007];
+}
+
+message m__room__leave_room__s2l {
+    required int32 msg_id = 1[default = 13008];
+}
+
+//return m__room__enter_room__s2l
+message m__room__rand_enter__l2s {
+    required int32 msg_id = 1[default = 13009];
+}
+
+
+//------------------------------------------
+//chat
+//------------------------------------------
+
+message p_chat {
+    required p_player_show_base player_show_base = 1;
+    required bytes voice = 2;       
+    required string content = 3;
+}
+
+message m__chat__public_speak__l2s{
+    required int32 msg_id = 1[default = 14001];
+    required int32 chat_type = 2; //1 世界， 2房间
+    required bytes voice = 3;       
+    required string content = 4;
+}
+
+message m__chat__public_speak__s2l{
+    required int32 msg_id = 1[default = 14002];
+    required int32 chat_type = 2; //1 世界， 2房间
+    required p_chat chat = 3;
+}
+
+
