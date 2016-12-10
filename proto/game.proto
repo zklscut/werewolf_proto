@@ -100,22 +100,23 @@ message m__room__rand_enter__l2s {
 //------------------------------------------
 
 message p_chat {
-    required p_player_show_base player_show_base = 1;
+    optional p_player_show_base player_show_base = 1;       //上传时候留空
     required bytes voice = 2;       
     required string content = 3;
+    required int32 length = 4;
+    required int32 compress = 5;
+    required int32 chat_type = 6; //1 世界， 2房间
+    optional int32 room_id = 7;
 }
 
 message m__chat__public_speak__l2s{
     required int32 msg_id = 1[default = 14001];
-    required int32 chat_type = 2; //1 世界， 2房间
-    required bytes voice = 3;       
-    required string content = 4;
+    required p_chat chat;
 }
 
 message m__chat__public_speak__s2l{
     required int32 msg_id = 1[default = 14002];
-    required int32 chat_type = 2; //1 世界， 2房间
-    required p_chat chat = 3;
+    required p_chat chat = 2;
 }
 
 
