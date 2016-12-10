@@ -111,7 +111,7 @@ message p_chat {
 
 message m__chat__public_speak__l2s{
     required int32 msg_id = 1[default = 14001];
-    required p_chat chat;
+    required p_chat chat = 2;
 }
 
 message m__chat__public_speak__s2l{
