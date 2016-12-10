@@ -114,7 +114,8 @@ message m__chat__public_speak__l2s{
 
 message m__chat__public_speak__s2l{
     required int32 msg_id = 1[default = 14002];
-    required p_chat chat = 2;
+    required int32 chat_type = 2; //1 世界， 2房间
+    required p_chat chat = 3;
 }
 
 
