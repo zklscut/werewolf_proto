@@ -1,31 +1,54 @@
-SHELL := /bin/bash
-.PHONY: help all test proto clean
-.DEFAULT_GOAL := help
-FILES=`cd proto && ls *.proto`
-ERL := erl
+REBAR=`which rebar || printf ./rebar`
+REPO=protobuffs
+all: 
+	erl -make
+	erl -pa ebin -s protobuffs_compile generate_source game.proto
 
-help:
-	@echo help
-	
-all:
-	@echo "compile protobuffs"
-	@$(ERL) -make
-	@for file in $(FILES); do \
-		( echo "compile: $$file" && $(ERL) -pa ebin -noshell -s protobuffs_compile scan_file_src proto/$$file -s erlang halt ) \
-	done;
-	
+get-deps:
+	@$(REBAR) get-deps
 
-test:all
-	$(ERL) -compile test/test.erl
-	$(ERL) -compile test_pb.erl
-	mv test.beam ebin/
-	mv test_pb.beam ebin/
-	$(ERL) -pa ebin -s test test -s erlang halt
-	@echo test done!
-	$(ERL) -pa ebin
+compile:
+	@$(REBAR) compile
+
+build: compile
+	@$(REBAR) escriptize
+
+ct:
+	./scripts/generate_emakefile.escript
+	@$(REBAR) skip_deps=true ct
+
+eunit:
+	@$(REBAR) skip_deps=true eunit
+
+test: compile eunit ct
 
 clean:
-	rm -rf ebin/*
-	@for file in $(FILES); do \
-		( rm -rf `echo $$file | sed 's/\(.*\)\..*/\1/g' `_pb.* ) \
-	done;
+	@$(REBAR) clean
+
+release: compile
+ifeq ($(VERSION),)
+	$(error VERSION must be set to build a release and deploy this package)
+endif
+ifeq ($(RELEASE_GPG_KEYNAME),)
+	$(error RELEASE_GPG_KEYNAME must be set to build a release and deploy this package)
+endif
+	@echo "==> Tagging version $(VERSION)"
+	@bash ./build/publish $(VERSION) validate
+	@git tag --sign -a "$(VERSION)" -m "erlang_protobuffs $(VERSION)" --local-user "$(RELEASE_GPG_KEYNAME)"
+	@git push --tags
+	@bash ./build/publish $(VERSION)
+
+APPS = kernel stdlib sasl erts ssl tools os_mon runtime_tools crypto inets \
+	xmerl webtool snmp public_key mnesia eunit syntax_tools compiler
+COMBO_PLT = $(HOME)/.$(REPO)_combo_dialyzer_plt
+
+check_plt: compile
+	dialyzer --check_plt --plt $(COMBO_PLT) --apps $(APPS) \
+		ebin
+
+build_plt: compile
+	dialyzer --build_plt --output_plt $(COMBO_PLT) --apps $(APPS) \
+		ebin
+
+dialyzer: compile
+	dialyzer -Wno_return --plt $(COMBO_PLT) ebin
