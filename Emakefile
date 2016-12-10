@@ -1,9 +1,0 @@
-{'src/pokemon_pb',
-[
-	debug_info,
-	{outdir,"ebin"}
-]}.
-{'src/*',
-[
-	{outdir,"ebin"}
-]}.
