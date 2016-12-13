@@ -120,3 +120,16 @@ message m__chat__public_speak__s2l{
 }
 
 
+//------------------------------------------
+//fight
+//------------------------------------------
+
+message m__fight__notice_duty__s2l{
+    required int32 msg_id = 1[default = 15001];
+    required int32 duty = 2;
+}
+
+message m__fight__notice_op__s2l{
+    required int32 msg_id = 1[default = 15002];
+    required int32 op = 2; // 0 = speak other = duty
+}
