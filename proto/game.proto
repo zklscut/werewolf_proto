@@ -200,3 +200,9 @@ message m__fight__toupiao_result__s2l{
     required int32 status = 2; 
     repeated p_toupiao_result result_list = 3;
 }
+
+//遊戲狀態變化 第一天 狼人 等等
+message m__fight__game_state_change__s2l{
+    required int32 msg_id = 1[default = 15016]; 
+    required int32 game_status =2;
+}
