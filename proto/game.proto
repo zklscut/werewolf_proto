@@ -131,5 +131,15 @@ message m__fight__notice_duty__s2l{
 
 message m__fight__notice_op__s2l{
     required int32 msg_id = 1[default = 15002];
-    required int32 op = 2; // 0 = speak other = duty
+    required int32 op = 2;  // duty
+}
+
+message m__fight__notice_op__l2s{
+    required int32 msg_id = 1[default = 15003];
+    repeated int32 op_list = 2;
+}
+
+message m__fight__notice_lover__s2l{
+    required int32 msg_id = 1[default = 15004];
+    repeated int32 lover_list = 2;
 }
