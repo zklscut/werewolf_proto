@@ -134,6 +134,10 @@ message m__fight__notice_op__s2l{
     required int32 op = 2;  // duty
 }
 
+//適用於通用操作，
+//丘比特 [seat1, seat2]
+//狼人[seat]
+//盜賊[duty] 類推
 message m__fight__notice_op__l2s{
     required int32 msg_id = 1[default = 15003];
     repeated int32 op_list = 2;
@@ -142,4 +146,57 @@ message m__fight__notice_op__l2s{
 message m__fight__notice_lover__s2l{
     required int32 msg_id = 1[default = 15004];
     repeated int32 lover_list = 2;
+}
+
+//開始精選
+message m__fight__jingxuan__l2s{
+    required int32 msg_id = 1[default = 15005];
+}
+
+//參與精選
+message m__fight__jingxuan__s2l{
+    required int32 msg_id = 1[default = 15006];
+}
+
+//通知開始發言
+message m__fight__notice_speak__s2l{
+    required int32 msg_id = 1[default = 15007];   
+    required int32 status = 2; //1 競選 2 死後
+}
+
+//發言
+message m__fight__speak__l2s{
+    required int32 msg_id = 1[default = 15009];   
+    required p_chat chat = 2;
+}
+
+//接收發言
+message m__fight__speak__s2l{
+    required int32 msg_id = 1[default = 15010];   
+    required p_chat chat = 2;
+}
+
+//開始投票
+message m__fight__toupiao__l2s{
+    required int32 msg_id = 1[default = 15011];   
+    repeated int32 seat_list = 2;
+    required int32 status = 3; //1 競選警長 2 投票驅逐
+}
+
+message m__fight__toupiao__s2l{
+    required int32 msg_id = 1[default = 15012];   
+    required int32 seat_id = 2;
+}
+
+
+p_toupiao_result{
+    required int32 seat_id;
+    repeated int32 select_list;
+}
+
+//投票結果
+message m__fight__toupiao_result__s2l{
+    required int32 msg_id = 1[default = 15014];   
+    required int32 status = 2; 
+    repeated p_toupiao_result result_list = 3;
 }
