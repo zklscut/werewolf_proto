@@ -176,7 +176,7 @@ message m__fight__notice_yuyanjia_result__s2l{
     required int32 duty = 3;
 }
 
-p_xuanju_result{
+message p_xuanju_result{
     required int32 seat_id;
     repeated int32 select_list;
 }
