@@ -124,15 +124,21 @@ message m__chat__public_speak__s2l{
 //fight
 //------------------------------------------
 
+//遊戲狀態變化 第一天 狼人 等等
+message m__fight__game_state_change__s2l{
+    required int32 msg_id = 1[default = 15001]; 
+    required int32 game_status =2;
+}
+
 //遊戲開始時通知各人職責
 message m__fight__notice_duty__s2l{
-    required int32 msg_id = 1[default = 15001];
+    required int32 msg_id = 1[default = 15002];
     required int32 duty = 2;
 }
 
 //通知對應人玩家開始相應操作
 message m__fight__notice_op__s2l{
-    required int32 msg_id = 1[default = 15002];
+    required int32 msg_id = 1[default = 15003];
     required int32 op = 2;  // duty  || 精選 || 發言 等
     repeated int32 attach_data = 3; //用於選舉
 }
@@ -142,30 +148,30 @@ message m__fight__notice_op__s2l{
 //狼人[seat]
 //盜賊[duty] 類推
 message m__fight__notice_op__l2s{
-    required int32 msg_id = 1[default = 15003];
+    required int32 msg_id = 1[default = 15004];
     repeated int32 op_list = 2;
 }
 
 
 //發言 補充上面的通用操作
 message m__fight__speak__l2s{
-    required int32 msg_id = 1[default = 15009];   
+    required int32 msg_id = 1[default = 15005];   
     required p_chat chat = 2;
 }
 
 //接收發言
 message m__fight__speak__s2l{
-    required int32 msg_id = 1[default = 15010];   
+    required int32 msg_id = 1[default = 15006];   
     required p_chat chat = 2;
 }
 
 message m__fight__notice_lover__s2l{
-    required int32 msg_id = 1[default = 15005];
+    required int32 msg_id = 1[default = 15007];
     repeated int32 lover_list = 2;
 }
 
 message m__fight__notice_yuyanjia_result__s2l{
-    required int32 msg_id = 1[default = 15006];
+    required int32 msg_id = 1[default = 15008];
     required int32 seat_id = 2;
     required int32 duty = 3;
 }
@@ -177,15 +183,10 @@ p_xuanju_result{
 
 //投票結果
 message m__fight__xuanju_result__s2l{
-    required int32 msg_id = 1[default = 15012];   
+    required int32 msg_id = 1[default = 15009];   
     required int32 xuanju_type = 2;  //驅逐/警長
     repeated p_xuanju_result result_list = 3;
     required int32 is_draw = 4;
 
 }
 
-//遊戲狀態變化 第一天 狼人 等等
-message m__fight__game_state_change__s2l{
-    required int32 msg_id = 1[default = 15013]; 
-    required int32 game_status =2;
-}
