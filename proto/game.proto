@@ -178,8 +178,8 @@ message m__fight__notice_yuyanjia_result__s2l{
 }
 
 message p_xuanju_result{
-    required int32 seat_id;
-    repeated int32 select_list;
+    required int32 seat_id = 1;
+    repeated int32 select_list = 2;
 }
 
 //投票結果
