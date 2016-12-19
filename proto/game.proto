@@ -200,3 +200,15 @@ message m__fight__night_result__s2l{
     repeated int32 die_list = 2;
 }
 
+message p_duty{
+    required int32 seat_id = 1;
+    required int32 duty_id = 2;
+}
+
+//战斗结束
+message m__fight__result__s2l{
+    required int32 msg_id = 1[default = 15010];
+    repeated int32 winner = 2;
+    required p_duty duty_list = 3;
+}
+
