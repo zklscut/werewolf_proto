@@ -194,3 +194,9 @@ message m__fight__xuanju_result__s2l{
 
 }
 
+//昨晚情况，死了几号等等
+message m__fight__night_result__s2l{
+    required int32 msg_id = 1[default = 15009];
+    repeated int32 die_list = 2;
+}
+
