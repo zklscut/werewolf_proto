@@ -94,6 +94,9 @@ message m__room__rand_enter__l2s {
     required int32 msg_id = 1[default = 13009];
 }
 
+message m__room__start_fight__l2s{
+    required int32 msg_id = 1[default = 13011];   
+}
 
 //------------------------------------------
 //chat
