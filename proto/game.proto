@@ -98,6 +98,12 @@ message m__room__start_fight__l2s{
     required int32 msg_id = 1[default = 13011];   
 }
 
+message m__room__notice_member_change__s2l{
+    required int32 msg_id = 1[default = 13012]; 
+    required p_room room_info = 2;
+    repeated p_player_show_base member_list = 3;     
+}
+
 //------------------------------------------
 //chat
 //------------------------------------------
