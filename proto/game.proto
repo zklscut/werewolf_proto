@@ -202,7 +202,7 @@ message m__fight__xuanju_result__s2l{
 
 //昨晚情况，死了几号等等
 message m__fight__night_result__s2l{
-    required int32 msg_id = 1[default = 15009];
+    required int32 msg_id = 1[default = 15010];
     repeated int32 die_list = 2;
 }
 
@@ -213,7 +213,7 @@ message p_duty{
 
 //战斗结束
 message m__fight__result__s2l{
-    required int32 msg_id = 1[default = 15010];
+    required int32 msg_id = 1[default = 15011];
     repeated int32 winner = 2;
     required p_duty duty_list = 3;
 }
