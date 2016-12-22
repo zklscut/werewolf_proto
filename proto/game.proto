@@ -143,6 +143,7 @@ message m__fight__game_state_change__s2l{
 message m__fight__notice_duty__s2l{
     required int32 msg_id = 1[default = 15002];
     required int32 duty = 2;
+    required int32 seat_id = 3;
 }
 
 //通知對應人玩家開始相應操作
