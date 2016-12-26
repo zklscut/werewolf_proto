@@ -219,3 +219,7 @@ message m__fight__result__s2l{
     required p_duty duty_list = 3;
 }
 
+message m__fight__guipiao__s2l{
+    required int32 msg_id = 1[default = 15012];
+    repeated int32 guipiao_list = 2;
+}
