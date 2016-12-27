@@ -223,3 +223,21 @@ message m__fight__guipiao__s2l{
     required int32 msg_id = 1[default = 15012];
     repeated int32 guipiao_list = 2;
 }
+
+//通知正在发言
+message m__fight__notice_fayan__s2l{
+    required int32 msg_id = 1[default = 15013];
+    required int32 seat_id = 2;
+}
+
+//通知发言结束
+message m__fight__stop_fayan__s2l{
+    required int32 msg_id = 1[default = 15014];
+    required int32 seat_id = 2;
+}
+
+//混血儿操作通知
+message m__fight__notice_hunxuer__s2l{
+    required int32 msg_id = 1[default = 15015];
+    required int32 select_seat = 2;
+}
