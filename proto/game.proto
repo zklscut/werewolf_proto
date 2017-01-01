@@ -96,6 +96,7 @@ message m__room__rand_enter__l2s {
 
 message m__room__start_fight__l2s{
     required int32 msg_id = 1[default = 13011];   
+    repeated int32 duty_list = 2;
 }
 
 message m__room__notice_member_change__s2l{
