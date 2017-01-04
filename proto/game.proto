@@ -245,3 +245,9 @@ message m__fight__notice_hunxuer__s2l{
     required int32 msg_id = 1[default = 15015];
     required int32 select_seat = 2;
 }
+
+//通知参选警长的人
+message m__fight__notice_part_jingzhang__s2l{
+    required int32 msg_id = 1[default = 15016];
+    repeated int32 seat_list = 2;
+}
