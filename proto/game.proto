@@ -255,6 +255,6 @@ message m__fight__notice_part_jingzhang__s2l{
 message m__fight__notice_skill__s2l{
     required int32 msg_id = 1[default = 15017];
     required int32 op = 2;      //技能
-    required int32 op_list = 3;
+    repeated int32 op_list = 3;
     required int32 seat_id = 4;
 }
