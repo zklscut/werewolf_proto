@@ -258,3 +258,9 @@ message m__fight__notice_skill__s2l{
     repeated int32 op_list = 3;
     required int32 seat_id = 4;
 }
+
+message m__fight__do_skill__l2s{
+    required int32 msg_id = 1[default = 15018];
+    required int32 op = 2; 
+    repeated int32 attach_data = 3; 
+}
