@@ -138,7 +138,8 @@ message m__chat__public_speak__s2l{
 //遊戲狀態變化 第一天 狼人 等等
 message m__fight__game_state_change__s2l{
     required int32 msg_id = 1[default = 15001]; 
-    required int32 game_status =2;
+    required int32 game_status = 2;
+    repeated int32 attach_data = 3;
 }
 
 //遊戲開始時通知各人職責
@@ -262,5 +263,5 @@ message m__fight__notice_skill__s2l{
 message m__fight__do_skill__l2s{
     required int32 msg_id = 1[default = 15018];
     required int32 op = 2; 
-    repeated int32 attach_data = 3; 
+    repeated int32 op_list = 3; 
 }
