@@ -265,3 +265,15 @@ message m__fight__do_skill__l2s{
     required int32 op = 2; 
     repeated int32 op_list = 3; 
 }
+
+message m__fihgt__online__s2l{
+    required int32 msg_id = 1[default = 15019];
+    required int32 duty = 2;
+    required int32 game_state =3;
+    required int32 round = 4;
+    required int32 speak_id = 5;
+    repeated int32 die_list = 6;
+    required int32 seat_id = 7;
+    repeated int32 attach_data1 = 8;
+    repeated int32 attach_data2 = 9;
+}
