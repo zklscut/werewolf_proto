@@ -266,7 +266,7 @@ message m__fight__do_skill__l2s{
     repeated int32 op_list = 3; 
 }
 
-message m__fihgt__online__s2l{
+message m__fight__online__s2l{
     required int32 msg_id = 1[default = 15019];
     required int32 duty = 2;
     required int32 game_state =3;
