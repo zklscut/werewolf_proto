@@ -113,11 +113,12 @@ message m__room__notice_member_change__s2l{
 message p_chat {
     optional p_player_show_base player_show_base = 1;       //上传时候留空
     required bytes voice = 2;       
-    required string content = 3;
+    required string content = 3;    
     required int32 length = 4;
     required int32 compress = 5;
     required int32 chat_type = 6; //1 世界， 2房间
     optional int32 room_id = 7;
+    required int32 msg_type = 8;  // 0为玩家消息，  > 0 为系统消息 比如 1为入队消息，2为离开，参数存在content
 }
 
 message m__chat__public_speak__l2s{
