@@ -278,3 +278,8 @@ message m__fight__online__s2l{
     repeated int32 attach_data1 = 8;
     repeated int32 attach_data2 = 9;
 }
+
+message m__fight__offline_s2l{
+	required int32 msg_id = 1[default = 15020];
+	required int32 seat_id = 2;
+}
