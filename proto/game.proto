@@ -280,7 +280,12 @@ message m__fight__online__s2l{
     repeated int32 offline_list = 10;
 }
 
-message m__fight__offline_s2l{
+message m__fight__offline__s2l{
 	required int32 msg_id = 1[default = 15020];
 	repeated int32 offline_list = 2;
+}
+
+message m__fight__op_timetick__s2l{
+	required int32 msg_id = 1[default = 15021];
+	repeated int32 timetick = 2;
 }
