@@ -4,6 +4,11 @@ message p_player_show_base {
     required string nick_name = 2;
 }
 
+message p_resource {
+    required int32 resource_id = 1;
+    required int32 num = 2;
+}
+
 //------------------------------------------
 //login
 //------------------------------------------
@@ -25,12 +30,23 @@ message m__player__info__l2s{
     required int32 msg_id = 1[default = 12001];
 }
 
+message p_win_rate {
+    required int32 duty_id = 1;     // 0全职业
+    required int32 win_cnt = 2;
+    required int32 all_cnt = 3;
+}
+
 message m__player__info__s2l{
     required int32 msg_id = 1[default = 12002];   
     required uint32 player_id = 2;
+    required string nick_name = 3;
+    required int32 grade = 4;
+    required int32 month_vip = 5;
+    required int32 equip = 6;
+    repeated p_resource resource_list = 8;
+    repeated p_win_rate win_rate_list = 9;
     // other info to be add
 }
-
 
 message m__player__errcode__s2l{
     required int32 msg_id = 1[default = 12004];   
@@ -281,11 +297,23 @@ message m__fight__online__s2l{
 }
 
 message m__fight__offline__s2l{
-	required int32 msg_id = 1[default = 15020];
-	repeated int32 offline_list = 2;
+    required int32 msg_id = 1[default = 15020];
+    repeated int32 offline_list = 2;
 }
 
 message m__fight__op_timetick__s2l{
-	required int32 msg_id = 1[default = 15021];
-	required int32 timetick = 2;
+    required int32 msg_id = 1[default = 15021];
+    required int32 timetick = 2;
 }
+
+//------------------------------------------
+//resource
+//------------------------------------------
+
+message m__resource__push__s2l{
+    required int32 msg_id = 1[default = 16001];
+    required int32 resource_id = 2;
+    required int32 num = 3;
+    required int32 action_id = 4;
+}
+    
