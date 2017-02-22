@@ -149,6 +149,15 @@ message m__room__end_chat__l2s{
     required int32 msg_id = 1[default = 13016];    
 }
 
+message m__room__want_chat_list__l2s{
+    required int32 msg_id = 1[default = 13017]; 
+}
+
+message m__room__want_chat_list__s2l{
+    required int32 msg_id = 1[default = 13018];    
+    repeated uint32 wait_list = 2;
+}
+
 //------------------------------------------
 //chat
 //------------------------------------------
