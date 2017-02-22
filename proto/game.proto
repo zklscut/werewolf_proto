@@ -128,6 +128,27 @@ message m__room__notice_member_change__s2l{
     repeated p_player_show_base member_list = 3;     
 }
 
+//开始排麦
+message m__room__want_chat__l2s{
+    required int32 msg_id = 1[default = 13013]; 
+}
+
+message m__room__want_chat__s2l{
+    required int32 msg_id = 1[default = 13014];    
+    repeated uint32 wait_list = 2;
+}
+
+message m__room__notice_start_chat__s2l{
+    required int32 msg_id = 1[default = 13015];    
+    required uint32 start_id = 2;
+    repeated uint32 wait_list = 3;
+}
+
+//结束发言，开始发言用chat内协议
+message m__room__end_chat__l2s{
+    required int32 msg_id = 1[default = 13016];    
+}
+
 //------------------------------------------
 //chat
 //------------------------------------------
