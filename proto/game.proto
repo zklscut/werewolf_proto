@@ -22,6 +22,14 @@ message m__account__login__s2l{
     required int32 result = 2;
 }
 
+message m__account__heart_beat__l2s{
+    required int32 msg_id = 1[default = 10003];
+}
+
+message m__account__heart_beat__s2l{
+    required int32 msg_id = 1[default = 10004];
+}
+
 //------------------------------------------
 //player_info
 //------------------------------------------
