@@ -59,6 +59,15 @@ message m__player__other_info__l2s{
     required uint32 player_id = 2;
 }
 
+
+message m__player__add_coin__l2s{
+    required int32 msg_id = 1[default = 12006];   
+}
+
+message m__player__add_diamond__l2s{
+    required int32 msg_id = 1[default = 12007];   
+}
+
 //------------------------------------------
 //room
 //------------------------------------------
