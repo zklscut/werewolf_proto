@@ -158,6 +158,28 @@ message m__room__want_chat_list__s2l{
     repeated string wait_list = 2;
 }
 
+//通知正在发言的人
+message m__room__notice_chat_info__s2l{
+    required int32  msg_id = 1[default = 13019];    
+    required uint32 player_id = 2;
+    required uint32 wait_time = 3;
+}
+
+//向玩家送礼物
+message m__room__send_gift__l2s{
+    required int32  msg_id = 1[default = 13020];    
+    required uint32 gift_id = 2;
+    required uint32 player_id = 3;
+}
+
+message m__room__send_gift__s2l{
+    required int32  msg_id = 1[default = 13020];    
+    required uint32 gift_id = 2;
+    required uint32 player_id = 3;
+    required uint32 result = 4;
+    required uint32 luck_add = 5;
+}
+
 //------------------------------------------
 //chat
 //------------------------------------------
