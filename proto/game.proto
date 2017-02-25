@@ -199,12 +199,13 @@ message m__room__send_gift__s2l{
 
 message m__room__kick_player__l2s {
     required int32 msg_id = 1[default = 13021];
-    required uint32 player_id = 2;
-    required uint32 kicked_player_id = 3;
+    required uint32 player_id = 2;							//踢人的玩家
+    required uint32 kicked_player_id = 3;	//被踢的玩家
 }
 
 message m__room__kick_player__s2l {
     required int32 msg_id = 1[default = 13022];
+    required string player_name = 2; //踢人玩家名称
 }
 
 //------------------------------------------
