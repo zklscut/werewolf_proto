@@ -76,6 +76,11 @@ message m__player__add_diamond__l2s{
     required int32 msg_id = 1[default = 12007];   
 }
 
+message m__player__change_name__l2s{
+    required int32 msg_id = 1[default = 12008];     
+    required string name;
+}
+
 //------------------------------------------
 //room
 //------------------------------------------
