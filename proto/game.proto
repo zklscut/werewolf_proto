@@ -393,6 +393,12 @@ message m__fight__op_timetick__s2l{
     required int32 timetick = 2;
 }
 
+//狼人小队发言
+message m__fight__langren_team_speak__s2l{
+    required int32 msg_id = 1[default = 15022];   
+    required p_chat chat = 2;
+}
+
 //------------------------------------------
 //resource
 //------------------------------------------
