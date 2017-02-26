@@ -206,6 +206,7 @@ message m__room__kick_player__s2l {
     required int32 msg_id = 1[default = 13022];
    	required uint32 kicked_player_id = 2;	//被踢的玩家
     required string player_name = 3; //踢人玩家名称
+    required uint32 result = 4;	//操作结果(0:成功, 1: 玩家不在当前房间, 2:不能踢出自己, 3:玩家不在房间中,4:自己不在房间里面确踢人)
 }
 
 //------------------------------------------
