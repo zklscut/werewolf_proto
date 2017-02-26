@@ -90,7 +90,7 @@ message p_room {
     required int32 max_player_num = 3;
     required p_player_show_base owner = 4;
     required string room_name = 5;
-    required string room_status = 6;
+    required int32 room_status = 6;//(0:组队阶段 1:准备阶段 >1 (1 +  游戏回合 * 2 + (黑夜 + 1, 白天 + 2)))
     repeated int32 duty_list = 7;
 }
 
@@ -206,7 +206,7 @@ message m__room__kick_player__s2l {
     required int32 msg_id = 1[default = 13022];
    	required uint32 kicked_player_id = 2;	//被踢的玩家
     required string player_name = 3; //踢人玩家名称
-    required uint32 result = 4;	//操作结果(0:成功, 1: 玩家不在当前房间, 2:不能踢出自己, 3:玩家不在房间中,4:自己不在房间里面确踢人)
+    required uint32 result = 4;	//操作结果(0:成功, 1: 玩家不在当前房间, 2:不能踢出自己, 3:玩家不在房间中,4:自己不在房间里面确踢人, 5:权限不够)
 }
 
 //------------------------------------------
