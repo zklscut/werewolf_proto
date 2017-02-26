@@ -204,7 +204,8 @@ message m__room__kick_player__l2s {
 
 message m__room__kick_player__s2l {
     required int32 msg_id = 1[default = 13022];
-    required string player_name = 2; //踢人玩家名称
+   	required uint32 kicked_player_id = 2;	//被踢的玩家
+    required string player_name = 3; //踢人玩家名称
 }
 
 //------------------------------------------
