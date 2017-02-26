@@ -78,7 +78,7 @@ message m__player__add_diamond__l2s{
 
 message m__player__change_name__l2s{
     required int32 msg_id = 1[default = 12008];     
-    required string name;
+    required string name = 2;
 }
 
 //------------------------------------------
@@ -195,7 +195,7 @@ message m__room__send_gift__l2s{
 }
 
 message m__room__send_gift__s2l{
-    required int32  msg_id = 1[default = 13020];    
+    required int32  msg_id = 1[default = 13021];    
     required uint32 gift_id = 2;
     required uint32 player_id = 3;
     required uint32 result = 4;
@@ -203,12 +203,12 @@ message m__room__send_gift__s2l{
 }
 
 message m__room__kick_player__l2s {
-    required int32 msg_id = 1[default = 13021];
+    required int32 msg_id = 1[default = 13022];
     required uint32 kicked_player_id = 2;	//被踢的玩家
 }
 
 message m__room__kick_player__s2l {
-    required int32 msg_id = 1[default = 13022];
+    required int32 msg_id = 1[default = 13023];
    	required uint32 kicked_player_id = 2;	//被踢的玩家
     required string player_name = 3; //踢人玩家名称
     required uint32 result = 4;	//操作结果(0:成功, 1: 玩家不在当前房间, 2:不能踢出自己, 3:玩家不在房间中,4:自己不在房间里面确踢人, 5:权限不够)
