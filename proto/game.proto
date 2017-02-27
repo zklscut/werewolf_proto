@@ -97,6 +97,7 @@ message p_room {
     required string room_name = 5;
     required int32 room_status = 6;//(0:组队阶段 1:准备阶段 >1 (1 +  游戏回合 * 2 + (黑夜 + 1, 白天 + 2)))
     repeated int32 duty_list = 7;
+    repeated uint32 ready_list = 8;
 }
 
 message m__room__get_list__s2l {
@@ -213,6 +214,19 @@ message m__room__kick_player__s2l {
     required string player_name = 3; //踢人玩家名称
     required uint32 result = 4;	//操作结果(0:成功, 1: 玩家不在当前房间, 2:不能踢出自己, 3:玩家不在房间中,4:自己不在房间里面确踢人, 5:权限不够)
 }
+
+message m__room__ready__l2s{
+    required int32 msg_id = 1[default = 13024];    
+}
+
+message m__room__cancle_ready__l2s{
+    required int32 msg_id = 1[default = 13025];    
+}
+
+message m__room__notice_all_ready__s2l{
+    required int32 msg_id = 1[default = 13026];       
+}
+
 
 //------------------------------------------
 //chat
