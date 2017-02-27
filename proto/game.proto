@@ -331,6 +331,13 @@ message m__fight__result__s2l{
     repeated p_duty duty_list = 3;
     repeated int32 lover = 4;
     required int32 hunxuer = 5;
+    required int32 daozei = 6;
+    required int32 mvp = 7;
+    required int32 carry = 8;
+    required int32 coin_add = 9;
+    required int32 cur_level = 10;
+    required int32 cur_exp = 11;
+    required int32 exp_add = 12;
 }
 
 message m__fight__guipiao__s2l{
