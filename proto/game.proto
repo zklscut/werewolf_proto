@@ -81,6 +81,12 @@ message m__player__change_name__l2s{
     required string name = 2;
 }
 
+message m__player__change_name__s2l{
+    required int32 msg_id = 1[default = 12009];     
+    required string name = 2;
+    required int32 result = 3; //(0:改名成功,1:砖石不够,2:名称非法)
+}
+
 //------------------------------------------
 //room
 //------------------------------------------
