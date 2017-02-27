@@ -338,6 +338,8 @@ message m__fight__result__s2l{
     required int32 cur_level = 10;
     required int32 cur_exp = 11;
     required int32 exp_add = 12;
+    required int32 level_up_exp = 13;//当前等级提升需要的经验
+    required int32 next_level_up_exp = 14;//下级等级提示需要的经验
 }
 
 message m__fight__guipiao__s2l{
