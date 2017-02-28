@@ -437,7 +437,7 @@ message m__fight__langren_team_speak__s2l{
 
 //守卫守护的对象
 message m__fight__shouwei_op__s2l{
-    required int32 msg_id = 1[default = 15022];   
+    required int32 msg_id = 1[default = 15023];   
     required int32 seat_id = 2;//守护的目标
 }
 
