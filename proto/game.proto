@@ -361,6 +361,7 @@ message m__fight__result__s2l{
     required int32 pre_level_up_exp = 13;//前个等级升级所需经验
     required int32 level_up_exp = 14;//当前等级提升需要的经验
     required int32 next_level_up_exp = 15;//下级等级提示需要的经验
+    required int32 victory_party = 16;//(0:好人胜利 1:狼人胜利 2:第三方胜利)
 }
 
 message m__fight__guipiao__s2l{
@@ -432,6 +433,12 @@ message m__fight__op_timetick__s2l{
 message m__fight__langren_team_speak__s2l{
     required int32 msg_id = 1[default = 15022];   
     required p_chat chat = 2;
+}
+
+//守卫守护的对象
+message m__fight__shouwei_op__s2l{
+    required int32 msg_id = 1[default = 15022];   
+    required int32 seat_id = 2;//守护的目标
 }
 
 //------------------------------------------
