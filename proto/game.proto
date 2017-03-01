@@ -446,6 +446,7 @@ message m__fight__over_info__s2l{
     required int32 msg_id = 1[default = 15024];
     repeated int32 winner = 2;
     repeated p_duty duty_list = 3;
+    repeated int32 dead_list = 3;
 }
 
 //------------------------------------------
