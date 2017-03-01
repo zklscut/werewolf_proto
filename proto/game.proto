@@ -441,6 +441,13 @@ message m__fight__shouwei_op__s2l{
     required int32 seat_id = 2;//守护的目标
 }
 
+//战斗结束信息
+message m__fight__over_info__s2l{
+    required int32 msg_id = 1[default = 15024];
+    repeated int32 winner = 2;
+    repeated p_duty duty_list = 3;
+}
+
 //------------------------------------------
 //resource
 //------------------------------------------
