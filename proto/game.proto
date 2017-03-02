@@ -233,6 +233,11 @@ message m__room__notice_all_ready__s2l{
     required int32 msg_id = 1[default = 13026];       
 }
 
+%%登陆时玩家不在房间里面的通知
+message m__room__login_not_in_room__s2l{
+    required int32 msg_id = 1[default = 13027];       
+}
+
 
 //------------------------------------------
 //chat
