@@ -238,6 +238,10 @@ message m__room__login_not_in_room__s2l{
     required int32 msg_id = 1[default = 13027];       
 }
 
+//进入房间失败
+message m__room__enter_fail__s2l{
+    required int32 msg_id = 1[default = 13028];       
+}
 
 //------------------------------------------
 //chat
