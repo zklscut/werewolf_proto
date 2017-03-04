@@ -171,6 +171,7 @@ message m__room__notice_start_chat__s2l{
     required int32 msg_id = 1[default = 13015];    
     required uint32 start_id = 2;
     repeated uint32 wait_list = 3;
+    required uint32 duration = 4;
 }
 
 //结束发言，开始发言用chat内协议
