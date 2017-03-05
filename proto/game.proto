@@ -427,6 +427,7 @@ message m__fight__online__s2l{
     repeated int32 attach_data1 = 8;
     repeated int32 attach_data2 = 9;
     repeated int32 offline_list = 10;
+    repeated int32 leave_list = 11;
 }
 
 message m__fight__offline__s2l{
@@ -457,6 +458,11 @@ message m__fight__over_info__s2l{
     repeated int32 winner = 2;
     repeated p_duty duty_list = 3;
     repeated int32 dead_list = 4;
+}
+
+message m__fight__leave__s2l{
+    required int32 msg_id = 1[default = 15025];
+    repeated int32 leave_list = 2;
 }
 
 //------------------------------------------
