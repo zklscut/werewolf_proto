@@ -434,6 +434,7 @@ message m__fight__online__s2l{
     repeated int32 offline_list = 10;
     repeated int32 leave_list = 11;
     repeated p_flop flop_list = 12;
+    repeated int32 winner = 13;
 }
 
 message m__fight__offline__s2l{
