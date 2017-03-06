@@ -426,20 +426,21 @@ message m__fight__online__s2l{
     required int32 duty = 2;
     required int32 game_state =3;
     required int32 round = 4;
-    required int32 wait_op = 5;
-    repeated int32 die_list = 6;
-    required int32 seat_id = 7;
-    repeated int32 attach_data1 = 8;
-    repeated int32 attach_data2 = 9;
-    repeated int32 offline_list = 10;
-    repeated int32 leave_list = 11;
-    repeated p_flop flop_list = 12;
-    repeated int32 winner = 13;
+    repeated int32 die_list = 5;
+    required int32 seat_id = 6;
+    repeated int32 attach_data1 = 7;
+    repeated int32 attach_data2 = 8;
+    repeated int32 offline_list = 9;
+    repeated int32 leave_list = 10;
+    repeated p_flop flop_list = 11;
+    repeated int32 winner = 12;
+    required int32 wait_op = 13;
     repeated int32 wait_op_list = 14;
-    required int32 jingzhang = 15;
-    repeated int32 lover_list = 16;
-    repeated p_duty duty_list = 17;
-    repeated int32 parting_jingzhang = 18;
+    repeated int32 wait_op_attach_data = 15;
+    required int32 jingzhang = 16;
+    repeated int32 lover_list = 17;
+    repeated p_duty duty_list = 18;
+    repeated int32 parting_jingzhang = 19;
 }
 
 message m__fight__offline__s2l{
