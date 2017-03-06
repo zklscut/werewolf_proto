@@ -438,6 +438,7 @@ message m__fight__online__s2l{
     repeated int32 wait_op_list = 14;
     required int32 jingzhang = 15;
     repeated int32 lover_list = 16;
+    repeated p_duty duty_list = 17;
 }
 
 message m__fight__offline__s2l{
