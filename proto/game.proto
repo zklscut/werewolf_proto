@@ -439,6 +439,7 @@ message m__fight__online__s2l{
     required int32 jingzhang = 15;
     repeated int32 lover_list = 16;
     repeated p_duty duty_list = 17;
+    repeated int32 parting_jingzhang = 18;
 }
 
 message m__fight__offline__s2l{
