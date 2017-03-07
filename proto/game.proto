@@ -494,11 +494,11 @@ message m__resource__push__s2l{
 //match
 //------------------------------------------
 
-message m__match__start__l2s{
+message m__match__match_start__l2s{
     required int32 msg_id = 1[default = 17001];
     repeated int32 player_list = 2;
 }
 
-message m__match__end__l2s{
+message m__match__match_end__l2s{
     required int32 msg_id = 1[default = 17002];
 }
