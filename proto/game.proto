@@ -510,6 +510,7 @@ message m__match__end_match__s2l{
 //重新排队中
 message m__match__again_match__s2l{
     required int32 msg_id = 1[default = 17004];
+    required int32 is_again = 2;//是否准备取消重新排队
 }
 
 //通知玩家匹配成功进入准备状态
