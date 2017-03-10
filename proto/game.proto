@@ -507,7 +507,7 @@ message m__match__end_match__s2l{
     required int32 msg_id = 1[default = 17003];
 }
 
-%%重新排队中
+//重新排队中
 message m__match__again_match__s2l{
     required int32 msg_id = 1[default = 17004];
 }
