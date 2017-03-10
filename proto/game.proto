@@ -516,18 +516,22 @@ message m__match__again_match__s2l{
 message m__match__notice_enter_match__s2l{
     required int32 msg_id = 1[default = 17005];     
     required int32 wait_id = 2; 
+    repeated p_player_show_base wait_list = 3;
 }
 
 //准备
 message m__match__enter_match__l2s{
     required int32 msg_id = 1[default = 17006];   
     required int32 wait_id = 2;
+   
 }
 
 //通知准备列表
 message m__match__enter_match_list__s2l{
     required int32 msg_id = 1[default = 17007];   
     required int32 wait_id = 2;
+    repeated p_player_show_base ready_list = 3;
+    repeated p_player_show_base wait_list = 4;
 }
 
 //------------------------------------------
