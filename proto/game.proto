@@ -529,3 +529,28 @@ message m__match__enter_match_list__s2l{
     required int32 msg_id = 1[default = 17007];   
     required int32 wait_id = 2;
 }
+
+//------------------------------------------
+//rank
+//------------------------------------------
+
+message p_rank {
+    required p_player_show_base player_show_base = 1;
+    required int32 rank = 2;
+    required int32 value = 3;
+}
+
+message m__rank__get_rank__l2s{
+    required int32 msg_id = 1[default = 18001];
+    required int32 rank_type = 2;       //1 狼人 2女巫
+    required int32 start_rank = 3;
+    required int32 end_rank = 4;
+}
+
+message m__rank__get_rank__s2l{
+    required int32 msg_id = 1[default = 18002];
+    required int32 rank_type = 2;       //1 狼人 2女巫
+    required int32 start_rank = 3;
+    required int32 end_rank = 4;
+    repeated p_rank rank_list = 5;
+}
