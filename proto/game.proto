@@ -95,6 +95,12 @@ message m__room__get_list__l2s{
     required int32 msg_id = 1[default = 13001];
 }
 
+message p_fight {
+    required string room_name = 1;
+    repeated int32 duty_list = 2;
+    repeated p_player_show_base player_info_list = 4;
+}
+
 message p_room {
     required int32 room_id = 1;
     required int32 cur_player_num = 2;
@@ -286,6 +292,7 @@ message m__fight__notice_duty__s2l{
     required int32 msg_id = 1[default = 15002];
     required int32 duty = 2;
     required int32 seat_id = 3;
+    required p_fight fight_info = 4;
 }
 
 //通知對應人玩家開始相應操作
@@ -442,6 +449,7 @@ message m__fight__online__s2l{
     repeated int32 lover_list = 18;
     repeated p_duty duty_list = 19;
     repeated int32 parting_jingzhang = 20;
+    required p_fight fight_info = 21;
 }
 
 message m__fight__offline__s2l{
