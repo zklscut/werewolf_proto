@@ -488,6 +488,12 @@ message m__fight__leave__s2l{
     repeated int32 leave_list = 2;
 }
 
+message m__fight__update_duty__s2l{
+    required int32 msg_id = 1[default = 15026];
+    required int32 pre_duty = 2;
+    required int32 cur_duty = 3;
+}
+
 //------------------------------------------
 //resource
 //------------------------------------------
