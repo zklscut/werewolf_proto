@@ -146,6 +146,7 @@ message m__room__leave_room__l2s {
 
 message m__room__leave_room__s2l {
     required int32 msg_id = 1[default = 13008];
+    required int32 result = 2; //1:退出成功,2:战斗中不能退出房间
 }
 
 //return m__room__enter_room__s2l
