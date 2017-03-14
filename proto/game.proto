@@ -589,7 +589,7 @@ message p_friend {
     required p_player_show_base player_show_base = 1;
     required int32 status = 2; //0 不在线 1在线 2比赛中
     required int32 room_id = 3;
-    required p_chat last_chat = 4;
+    //required p_chat last_chat = 4;
 }
 
 message m__friend__get_friend__l2s{
