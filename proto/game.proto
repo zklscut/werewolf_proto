@@ -580,3 +580,54 @@ message m__rank__get_rank__s2l{
     required int32 end_rank = 4;
     repeated p_rank rank_list = 5;
 }
+
+//------------------------------------------
+//friend
+//------------------------------------------
+
+message p_friend {
+    required p_player_show_base player_show_base = 1;
+    required int32 status = 2; //0 不在线 1在线 2比赛中
+    required int32 room_id = 3;
+    required p_chat last_chat = 4;
+}
+
+message m__friend__get_friend__l2s{
+    required int32 msg_id = 1[default = 19001];
+}
+
+message m__friend__get_friend__s2l{
+    required int32 msg_id = 1[default = 19002];
+    repeated p_friend friend_list = 2;   
+}
+
+message m__friend__add_friend__l2s{
+    required int32 msg_id = 1[default = 19003];
+    required int32 add_friend = 2;
+}
+
+message m__friend__remove_friend__l2s{
+    required int32 msg_id = 1[default = 19005];
+    required int32 remove_friend = 2;   
+}
+
+message m__chat__private_chat__l2s{
+    required int32 msg_id = 1[default = 19007];
+    required p_chat chat = 2;
+    required uint32 target_id = 3;
+}    
+
+message m__chat__private_chat__s2l{
+    required int32 msg_id = 1[default = 19008];
+    required p_chat chat = 2;
+}    
+
+message m__friend__get_chat_list__l2s{
+    required int32 msg_id = 1[default = 19009];
+    required uint32 friend_id = 2;
+}
+
+message m__friend__get_chat_list__s2l{
+    required int32 msg_id = 1[default = 19010];
+    repeated p_chat chat_list = 2;
+}
