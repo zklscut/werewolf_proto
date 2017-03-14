@@ -631,3 +631,8 @@ message m__friend__get_chat_list__s2l{
     required int32 msg_id = 1[default = 19010];
     repeated p_chat chat_list = 2;
 }
+
+message m__friend__add_friend__s2l{
+    required int32 msg_id = 1[default = 19011];
+    required p_friend friend = 2;
+}
