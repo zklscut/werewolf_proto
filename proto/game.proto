@@ -611,13 +611,13 @@ message m__friend__remove_friend__l2s{
     required int32 remove_friend = 2;   
 }
 
-message m__chat__private_chat__l2s{
+message m__friend__private_chat__l2s{
     required int32 msg_id = 1[default = 19007];
     required p_chat chat = 2;
     required uint32 target_id = 3;
 }    
 
-message m__chat__private_chat__s2l{
+message m__friend__private_chat__s2l{
     required int32 msg_id = 1[default = 19008];
     required p_chat chat = 2;
 }    
