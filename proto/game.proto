@@ -506,7 +506,7 @@ message m__fight__random_duty__s2l{
 }
 
 message m__fight__select_duty__s2l{
-    required int32 msg_id = 1[default = 15027];
+    required int32 msg_id = 1[default = 15028];
     repeated int32 result = 2; //0:成功,1:重复操作,只能选择一次 2:金币不够 3:牌已经被其他人抢了
 }
 
