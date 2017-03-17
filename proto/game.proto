@@ -533,11 +533,13 @@ message m__resource__push__s2l{
 
 message m__match__start_match__l2s{
     required int32 msg_id = 1[default = 17001];
-    repeated int32 player_list = 2;
+    required int32 mode = 2;
+    repeated int32 player_list = 3;
 }
 
 message m__match__end_match__l2s{
     required int32 msg_id = 1[default = 17002];
+    required int32 mode = 2;
 }
 
 message m__match__end_match__s2l{
@@ -547,20 +549,23 @@ message m__match__end_match__s2l{
 //重新排队中
 message m__match__again_match__s2l{
     required int32 msg_id = 1[default = 17004];
-    required int32 is_again = 2;//是否准备取消重新排队
+    required int32 mode = 2;
+    required int32 is_again = 3;//是否准备取消重新排队
 }
 
 //通知玩家匹配成功进入准备状态
 message m__match__notice_enter_match__s2l{
     required int32 msg_id = 1[default = 17005];     
     required int32 wait_id = 2; 
-    repeated p_player_show_base wait_list = 3;
+    required int32 mode = 3;
+    repeated p_player_show_base wait_list = 4;
 }
 
 //准备
 message m__match__enter_match__l2s{
     required int32 msg_id = 1[default = 17006];   
-    required int32 wait_id = 2;
+    required int32 mode = 2;
+    required int32 wait_id = 3;
    
 }
 
