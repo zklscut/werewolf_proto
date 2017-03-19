@@ -115,7 +115,7 @@ message m__player__get_head__l2s{
 message m__player__get_head__s2l{
     required int32 msg_id = 1[default = 12014];     
     required uint32 player_id = 2;
-    required p_head img_data = 2;
+    required p_head img_data = 3;
 }
 
 //------------------------------------------
