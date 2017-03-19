@@ -92,14 +92,9 @@ message m__player__kick__s2l{
     required int32 kick_reason = 2;
 }
 
-message p_head {
-    required int32 test = 1;
-    required bytes img_data = 2;
-}
-
 message m__player__upload_head__l2s{
     required int32 msg_id = 1[default = 12011];     
-    required p_head img_data = 2;
+    required bytes img_data = 2;
 }
 
 message m__player__upload_head__s2l{
@@ -115,7 +110,7 @@ message m__player__get_head__l2s{
 message m__player__get_head__s2l{
     required int32 msg_id = 1[default = 12014];     
     required uint32 player_id = 2;
-    required p_head img_data = 3;
+    required bytes img_data = 3;
 }
 
 //------------------------------------------
