@@ -494,6 +494,7 @@ message m__fight__offline__s2l{
 message m__fight__op_timetick__s2l{
     required int32 msg_id = 1[default = 15021];
     required int32 timetick = 2;
+    required int32 wait_op = 3;
 }
 
 //狼人小队发言
