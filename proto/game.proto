@@ -537,6 +537,7 @@ message m__fight__select_duty__s2l{
     required int32 msg_id = 1[default = 15028];
     required int32 result = 2; //0:成功,1:重复操作,只能选择一次 2:金币不够 3:牌已经被其他人抢了
     required int32 duty = 3;
+    required int32 seat_id = 4;
 }
 
 message m__fight__notice_langren__s2l{
