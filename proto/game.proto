@@ -484,6 +484,9 @@ message m__fight__online__s2l{
     repeated p_duty duty_list = 19;
     repeated int32 parting_jingzhang = 20;
     required p_fight fight_info = 21;
+    required int32 duty_select_over = 22;
+    required int32 duty_select_time = 23;
+    repeated int32 duty_select_info = 24;
 }
 
 message m__fight__offline__s2l{
