@@ -533,7 +533,8 @@ message m__fight__update_duty__s2l{
 
 message m__fight__random_duty__s2l{
     required int32 msg_id = 1[default = 15027];
-    repeated int32 duty_list = 2;
+    required int32 left_time = 2;
+    repeated int32 duty_list = 3;
 }
 
 message m__fight__select_duty__s2l{
