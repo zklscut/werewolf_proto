@@ -562,6 +562,7 @@ message m__fight__forbid_other_speak__l2s{
 message m__fight__forbid_other_speak__s2l{
     required int32 msg_id = 1[default = 15031];
     required int32 is_forbid = 2; 
+    required int32 seat_id = 3; 
 }
 
 
