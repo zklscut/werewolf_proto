@@ -553,6 +553,18 @@ message m__fight__notice_langren__s2l{
     repeated int32 langren_list = 2;
 }
 
+
+message m__fight__forbid_other_speak__l2s{
+    required int32 msg_id = 1[default = 15030];
+    required int32 is_forbid = 2; 
+}
+
+message m__fight__forbid_other_speak__s2l{
+    required int32 msg_id = 1[default = 15031];
+    required int32 is_forbid = 2; 
+}
+
+
 //------------------------------------------
 //resource
 //------------------------------------------
