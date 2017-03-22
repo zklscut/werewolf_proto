@@ -326,6 +326,7 @@ message m__fight__notice_duty__s2l{
     required int32 duty = 2;
     required int32 seat_id = 3;
     required p_fight fight_info = 4;
+    required int32 fight_mode = 5;
 }
 
 //通知對應人玩家開始相應操作
@@ -489,6 +490,7 @@ message m__fight__online__s2l{
     required int32 duty_select_time = 23;
     repeated int32 duty_select_info = 24;
     required int32 is_night = 25;
+    required int32 fight_mode = 26;
 }
 
 message m__fight__offline__s2l{
