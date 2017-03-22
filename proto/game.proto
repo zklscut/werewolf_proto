@@ -381,6 +381,7 @@ message m__fight__xuanju_result__s2l{
     repeated p_xuanju_result result_list = 3;
     required int32 is_draw = 4;
     required int32 result_id = 5;
+    repeated int32 max_list = 6;
 }
 
 //昨晚情况，死了几号等等
