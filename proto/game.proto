@@ -351,6 +351,7 @@ message m__fight__notice_op__l2s{
 message m__fight__speak__l2s{
     required int32 msg_id = 1[default = 15005];   
     required p_chat chat = 2;
+    required int32 night_langren = 3;
 }
 
 //接收發言
