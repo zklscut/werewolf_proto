@@ -337,6 +337,8 @@ message m__fight__notice_op__s2l{
     
 }
 
+
+
 //適用於通用操作，
 //丘比特 [seat1, seat2]
 //狼人[seat]
@@ -585,6 +587,13 @@ message m__fight__chat_input__s2l{
     required uint32 player_id = 4;
     required string content = 5;
 }
+
+//接收狼人动态操作数据
+message m__fight__dync_langren_op_data__s2l{
+    required int32  msg_id = 1[default = 15034];   
+    repeated int32  op_data = 2; 
+}
+
 
 
 //------------------------------------------
