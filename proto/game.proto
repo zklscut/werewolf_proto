@@ -334,6 +334,7 @@ message m__fight__notice_op__s2l{
     required int32 msg_id = 1[default = 15003];
     required int32 op = 2;  // duty  || 精選 || 發言 等
     repeated int32 attach_data = 3; //用於選舉
+    
 }
 
 //適用於通用操作，
@@ -344,6 +345,7 @@ message m__fight__notice_op__l2s{
     required int32 msg_id = 1[default = 15004];
     required int32 op = 2;
     repeated int32 op_list = 3;
+    required int32 confirm = 4;//是否确定选择
 }
 
 
