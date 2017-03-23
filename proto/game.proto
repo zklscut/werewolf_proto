@@ -467,7 +467,7 @@ message p_flop {
 message m__fight__online__s2l{
     required int32 msg_id = 1[default = 15019];
     required int32 duty = 2;
-    required int32 game_state =3;
+    required int32 game_status =3;
     required int32 round = 4;
     repeated int32 die_list = 5;
     required int32 seat_id = 6;
@@ -492,6 +492,7 @@ message m__fight__online__s2l{
     required int32 is_night = 25;
     required int32 fight_mode = 26;
     repeated int32 speak_forbid_info = 27;
+    required int32 game_round = 28;
 }
 
 message m__fight__offline__s2l{
@@ -562,8 +563,7 @@ message m__fight__forbid_other_speak__l2s{
 
 message m__fight__forbid_other_speak__s2l{
     required int32 msg_id = 1[default = 15031];
-    required int32 is_forbid = 2; 
-    required int32 seat_id = 3; 
+    repeated int32 forbid_info = 2; 
 }
 
 
