@@ -571,15 +571,17 @@ message m__fight__forbid_other_speak__s2l{
 message m__fight__chat_input__l2s{
     required int32  msg_id = 1[default = 15032];   
     required int32  is_expression = 2; //是否表情
-    required string content = 3;
+    required int32  night_langren = 3; //是否晚上狼人打的字
+    required string content = 4;
 }
 
 //接收發言
 message m__fight__chat_input__s2l{
     required int32  msg_id = 1[default = 15033];   
     required int32  is_expression = 2; //是否表情
-    required uint32 player_id = 3;
-    required string content = 4;
+    required int32  night_langren = 3; //是否晚上狼人打的字
+    required uint32 player_id = 4;
+    required string content = 5;
 }
 
 
