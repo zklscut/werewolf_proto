@@ -595,6 +595,10 @@ message m__fight__dync_langren_op_data__s2l{
     repeated int32  op_data = 2; 
 }
 
+//守卫守护的对象
+message m__fight__langren_op__s2l{
+    required int32 msg_id = 1[default = 15035];   
+    required int32 seat_id = 2;//狼人猎杀的目标
 
 
 //------------------------------------------
