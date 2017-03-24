@@ -498,6 +498,7 @@ message m__fight__online__s2l{
     required int32 fight_mode = 26;
     repeated int32 speak_forbid_info = 27;
     required int32 game_round = 28;
+    required int32 night_op_left_time = 29;
 }
 
 message m__fight__offline__s2l{
