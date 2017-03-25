@@ -601,6 +601,13 @@ message m__fight__langren_op__s2l{
     required int32 seat_id = 2;//狼人猎杀的目标
 }
 
+//女巫操作结果
+message m__fight__nvwu_op__s2l{
+    required int32 msg_id = 1[default = 15036];   
+    required int32 du_seat_id = 2;//毒杀目标
+    required int32 save_seat_id = 3;//救治目标
+}
+
 //------------------------------------------
 //resource
 //------------------------------------------
