@@ -399,6 +399,7 @@ message m__fight__night_result__s2l{
 message p_duty{
     required int32 seat_id = 1;
     required int32 duty_id = 2;
+    required uint32 player_id = 3;
 }
 
 //战斗结束
