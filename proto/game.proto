@@ -420,6 +420,8 @@ message m__fight__result__s2l{
     required int32 next_level_up_exp = 15;//下级等级提示需要的经验
     required int32 victory_party = 16;//(0:好人胜利 1:狼人胜利 2:第三方胜利)
     required int32 room_id = 17;//当前所在的房间
+    required int32 own_seat_id = 18;
+    
 }
 
 message m__fight__guipiao__s2l{
