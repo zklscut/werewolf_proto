@@ -121,6 +121,7 @@ message m__player__change_sex__l2s{
 
 message m__player__change_sex__s2l{
     required int32 msg_id = 1[default = 12016];     
+    required int32 sex = 2;
 }
 
 //------------------------------------------
