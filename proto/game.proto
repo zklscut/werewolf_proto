@@ -54,6 +54,7 @@ message m__player__info__s2l{
     repeated p_resource resource_list = 8;
     repeated p_win_rate win_rate_list = 9;
     required int32 other_player = 10;
+    required int32 sex = 11;
     // other info to be add
 }
 
@@ -111,6 +112,15 @@ message m__player__get_head__s2l{
     required int32 msg_id = 1[default = 12014];     
     required uint32 player_id = 2;
     required bytes img_data = 3;
+}
+
+message m__player__change_sex__l2s{
+    required int32 msg_id = 1[default = 12015];     
+    required int32 sex = 2;
+}
+
+message m__player__change_sex__s2l{
+    required int32 msg_id = 1[default = 12016];     
 }
 
 //------------------------------------------
