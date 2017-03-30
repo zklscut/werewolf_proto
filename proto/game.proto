@@ -295,7 +295,7 @@ message m__room__enter_simple_room__l2s {
 
 //获取房间信息
 //进入房间失败
-message m__room__get_room_info_l2s{
+message m__room__get_room_info__l2s{
     required int32 msg_id = 1[default = 13030];     
     required int32 room_id = 2;  
 }
@@ -316,12 +316,12 @@ message m__room__get_room_info_fail__s2l {
 
 
 //获取人数未满普通房间列表()
-message m__room__get_not_full_normal_room_id_list_l2s{
+message m__room__get_not_full_normal_room_id_list__l2s{
     required int32 msg_id = 1[default = 13033];     
 }
 
 
-message m__room__get_not_full_normal_room_list_s2l{
+message m__room__get_not_full_normal_room_id_list__s2l{
     required int32 msg_id = 1[default = 13034];     
     repeated int32 room_id_list = 2;  
 }
