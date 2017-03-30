@@ -654,6 +654,15 @@ message m__fight__nvwu_op__s2l{
     required int32 save_seat_id = 3;//救治目标
 }
 
+
+//战斗异常退出
+message m__fight_over_error__s2l
+{
+		required int32 msg_id = 1[default = 15037];   
+		required int32 reason = 2; //1:活着的玩家都离线了2:超过最大天数3:服务器异常
+}
+
+
 //------------------------------------------
 //resource
 //------------------------------------------
