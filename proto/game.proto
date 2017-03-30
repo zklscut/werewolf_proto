@@ -293,6 +293,38 @@ message m__room__enter_simple_room__l2s {
     required int32 msg_id = 1[default = 13029];
 }
 
+//获取房间信息
+//进入房间失败
+message m__room__get_room_info_l2s{
+    required int32 msg_id = 1[default = 13030];     
+    required int32 room_id = 2;  
+}
+
+
+//
+message m__room__get_room_info__s2l {
+    required int32 msg_id = 1[default = 13031];
+    required p_room room_info = 2;
+}
+
+
+message m__room__get_room_info_fail__s2l {
+    required int32 msg_id = 1[default = 13032];
+    required int32 reason = 2; //1:房间不存在
+    
+}
+
+
+//获取人数未满普通房间列表()
+message m__room__get_not_full_normal_room_id_list_l2s{
+    required int32 msg_id = 1[default = 13033];     
+}
+
+
+message m__room__get_not_full_normal_room_list_s2l{
+    required int32 msg_id = 1[default = 13034];     
+    repeated int32 room_id_list = 2;  
+}
 
 //------------------------------------------
 //chat
