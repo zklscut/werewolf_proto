@@ -465,6 +465,7 @@ message m__fight__result__s2l{
     required int32 victory_party = 16;//(0:好人胜利 1:狼人胜利 2:第三方胜利)
     required int32 room_id = 17;//当前所在的房间
     required int32 own_seat_id = 18;
+    repeated int32 third_list = 19;
     
 }
 
