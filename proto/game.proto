@@ -545,6 +545,7 @@ message m__fight__online__s2l{
     repeated int32 speak_forbid_info = 27;
     required int32 game_round = 28;
     required int32 night_op_left_time = 29;
+    repeated int32 bailang_list = 30;
 }
 
 message m__fight__offline__s2l{
@@ -605,6 +606,7 @@ message m__fight__select_duty__s2l{
 message m__fight__notice_langren__s2l{
     required int32 msg_id = 1[default = 15029];
     repeated int32 langren_list = 2;
+    repeated int32 bailang_list = 3;
 }
 
 
