@@ -666,6 +666,12 @@ message m__fight_over_error__s2l
 		required int32 reason = 3; //1:活着的玩家都离线了2:超过最大天数3:服务器异常
 }
 
+//盗贼操作结果
+message m__fight__daozei_op__s2l{
+    required int32 msg_id = 1[default = 15038];   
+    required int32 duty = 2;//职责
+}
+
 
 //------------------------------------------
 //resource
