@@ -2,6 +2,7 @@
 message p_player_show_base {
     required uint32 player_id = 1;
     required string nick_name = 2;
+    required string head_img_name = 3;
 }
 
 message p_resource {
