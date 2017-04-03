@@ -55,6 +55,7 @@ message m__player__info__s2l{
     repeated p_win_rate win_rate_list = 9;
     required int32 other_player = 10;
     required int32 sex = 11;
+    required string head_img_name = 12;
     // other info to be add
 }
 
@@ -123,6 +124,29 @@ message m__player__change_sex__s2l{
     required int32 msg_id = 1[default = 12016];     
     required int32 sex = 2;
 }
+
+message m__player__upload_head_img_name__l2s{
+    required int32 msg_id = 1[default = 12017];     
+    required string head_img_name = 2;
+}
+
+message m__player__upload_head_img_name__s2l{
+    required int32 msg_id = 1[default = 12018];  
+}
+
+
+message m__player__get_head_img_name__l2s{
+    required int32 msg_id = 1[default = 12019];     
+    required uint32 player_id = 2;
+}
+
+message m__player__get_head_img_name__s2l{
+    required int32 msg_id = 1[default = 12020];     
+    required uint32 player_id = 2;
+    required string head_img_name = 3;
+}
+
+
 
 //------------------------------------------
 //room
