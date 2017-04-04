@@ -573,6 +573,7 @@ message m__fight__online__s2l{
     required int32 game_round = 28;
     required int32 night_op_left_time = 29;
     repeated int32 bailang_list = 30;
+    repeated int32 duty_select_seat_list = 31;
 }
 
 message m__fight__offline__s2l{
