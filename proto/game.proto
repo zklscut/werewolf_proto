@@ -395,6 +395,7 @@ message m__fight__notice_duty__s2l{
     required int32 seat_id = 3;
     required p_fight fight_info = 4;
     required int32 fight_mode = 5;
+    required int32 duty_valid = 6;
 }
 
 //通知對應人玩家開始相應操作
