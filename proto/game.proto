@@ -423,7 +423,7 @@ message m__fight__notice_op__l2s{
 message m__fight__speak__l2s{
     required int32 msg_id = 1[default = 15005];   
     required p_chat chat = 2;
-    required int32 night_langren = 3;
+    required int32 speak_type = 3; //说话类型(0:正常发言,1:狼队发言,2:死亡的人发言)
 }
 
 //接收發言
@@ -650,7 +650,7 @@ message m__fight__forbid_other_speak__s2l{
 message m__fight__chat_input__l2s{
     required int32  msg_id = 1[default = 15032];   
     required int32  is_expression = 2; //是否表情
-    required int32  night_langren = 3; //是否晚上狼人打的字
+    required int32  chat_type = 3; //聊天类型(0:正常, 1:狼队, 2:死人)
     required string content = 4;
 }
 
@@ -658,7 +658,7 @@ message m__fight__chat_input__l2s{
 message m__fight__chat_input__s2l{
     required int32  msg_id = 1[default = 15033];   
     required int32  is_expression = 2; //是否表情
-    required int32  night_langren = 3; //是否晚上狼人打的字
+    required int32  chat_type = 3; //聊天类型(0:正常, 1:狼队, 2:死人)
     required uint32 player_id = 4;
     required string content = 5;
 }
