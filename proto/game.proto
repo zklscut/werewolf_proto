@@ -722,7 +722,7 @@ message p_die_info {
 }
 
 //战斗结束信息
-message m__fight__die_info__s2l{
+message m__fight__end_info__s2l{
     required int32 msg_id = 1[default = 15039];
     repeated p_duty duty_list = 2;
     repeated p_die_info die_info = 3;
