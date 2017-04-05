@@ -714,6 +714,20 @@ message m__fight__daozei_op__s2l{
     required int32 duty = 2;//职责
 }
 
+message p_die_info {
+    required int32 seat_id = 1;     
+    required int32 die_type = 2;
+		required int32 game_round = 3;
+		required int32 is_night = 4;    
+}
+
+//战斗结束信息
+message m__fight__die_info__s2l{
+    required int32 msg_id = 1[default = 15039];
+    repeated p_duty duty_list = 2;
+    repeated p_die_info die_info = 3;
+    required int32 result_type = 4;
+}
 
 //------------------------------------------
 //resource
