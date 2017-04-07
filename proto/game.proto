@@ -325,7 +325,8 @@ message m__room__login_not_in_room__s2l{
 
 //进入房间失败
 message m__room__enter_fail__s2l{
-    required int32 msg_id = 1[default = 13028];       
+    required int32 msg_id = 1[default = 13028];     
+    required int32 result = 2;//1:房间不存在 2:人数已满 3:战斗中
 }
 
 //进入简单模式的房间，如果没有则创建
