@@ -159,7 +159,7 @@ message m__player__invite_friends__s2l{
 
 message m__player__friend_invite__s2l{
 	required int32 msg_id = 1[default = 12023];
-	repeated p_player_show_base player_info = 2;
+	required p_player_show_base player_info = 2;
 	required int32 room_id = 3;
 }
 
