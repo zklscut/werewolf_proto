@@ -390,6 +390,8 @@ message m__chat__public_speak__l2s{
 message m__chat__public_speak__s2l{
     required int32 msg_id = 1[default = 14002];
     required p_chat chat = 2;
+    required uint32 player_id = 3;
+    
 }
 
 
@@ -856,7 +858,8 @@ message m__friend__private_chat__l2s{
 message m__friend__private_chat__s2l{
     required int32 msg_id = 1[default = 19008];
     required p_player_show_base target_info = 2;
-    required p_chat chat = 3;
+    required p_player_show_base speak_info = 3;
+    required p_chat chat = 4;
 }    
 
 message m__friend__get_chat_list__l2s{
