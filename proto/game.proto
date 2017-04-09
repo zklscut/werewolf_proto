@@ -372,14 +372,14 @@ message m__room__get_not_full_normal_room_id_list__s2l{
 //------------------------------------------
 
 message p_chat {
-    optional p_player_show_base player_show_base = 1;       //上传时候留空
-    required bytes voice = 2;       
-    required string content = 3;    
-    required int32 length = 4;
-    required int32 compress = 5;
-    required int32 chat_type = 6; //1 世界， 2房间
-    optional int32 room_id = 7;
-    required int32 msg_type = 8;  // 0为玩家消息，  > 0 为系统消息 比如 1为入队消息，2为离开，参数存在content
+    //optional p_player_show_base player_show_base = 1;       //上传时候留空
+    required bytes voice = 1;       
+    required string content = 2;    
+    required int32 length = 3;
+    required int32 compress = 4;
+    required int32 chat_type = 5; //1 世界， 2房间
+    optional int32 room_id = 6;
+    required int32 msg_type = 7;  // 0为玩家消息，  > 0 为系统消息 比如 1为入队消息，2为离开，参数存在content
 }
 
 message m__chat__public_speak__l2s{
@@ -447,6 +447,7 @@ message m__fight__speak__l2s{
 message m__fight__speak__s2l{
     required int32 msg_id = 1[default = 15006];   
     required p_chat chat = 2;
+    required uint32 player_id = 1;
 }
 
 message m__fight__notice_lover__s2l{
