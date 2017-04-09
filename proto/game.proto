@@ -372,7 +372,7 @@ message m__room__get_not_full_normal_room_id_list__s2l{
 //------------------------------------------
 
 message p_chat {
-    //optional p_player_show_base player_show_base = 1;       //上传时候留空
+    optional p_player_show_base player_show_base = 1;       //上传时候留空
     required bytes voice = 2;       
     required string content = 3;    
     required int32 length = 4;
