@@ -447,7 +447,7 @@ message m__fight__speak__l2s{
 message m__fight__speak__s2l{
     required int32 msg_id = 1[default = 15006];   
     required p_chat chat = 2;
-    required uint32 player_id = 1;
+    required uint32 player_id = 3;
 }
 
 message m__fight__notice_lover__s2l{
