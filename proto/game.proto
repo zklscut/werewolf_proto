@@ -3,6 +3,7 @@ message p_player_show_base {
     required uint32 player_id = 1;
     required string nick_name = 2;
     required string head_img_name = 3;
+    required int32  gvoice_status = 4;
 }
 
 message p_resource {
@@ -161,6 +162,16 @@ message m__player__friend_invite__s2l{
 	required int32 msg_id = 1[default = 12023];
 	required p_player_show_base player_info = 2;
 	required int32 room_id = 3;
+}
+
+message m__player__update_player_base_info__s2l{
+	required int32 msg_id = 1[default = 12024];
+	required p_player_show_base player_info = 2;
+}
+
+message m__player__update_gvoice_status__l2s{
+    required int32 msg_id = 1[default = 12025];     
+    repeated int32 gvoice_status = 2; //“0”：停止说话 “1”：开始说话 “2”:继续说话
 }
 
 
