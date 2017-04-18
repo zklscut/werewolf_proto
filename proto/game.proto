@@ -171,7 +171,7 @@ message m__player__update_player_base_info__s2l{
 
 message m__player__update_gvoice_status__l2s{
     required int32 msg_id = 1[default = 12025];     
-    repeated int32 gvoice_status = 2; //“0”：停止说话 “1”：开始说话 “2”:继续说话
+    required int32 gvoice_status = 2; //“0”：停止说话 “1”：开始说话 “2”:继续说话
 }
 
 
